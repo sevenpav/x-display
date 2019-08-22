@@ -1,0 +1,275 @@
+.header {
+	background-color: #474747;
+}
+
+.header__container {
+	@include container;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.header__logo-container {
+	position: relative;
+}
+
+.header__logo {
+	animation-play-state: paused;
+	animation-fill-mode: backwards;
+	&--state-1 {
+		z-index: 30;
+	}
+
+	&--state-2 {
+		position: absolute;
+		left: 0;
+		z-index: 20;
+		opacity: 0;
+
+		&:hover {
+			animation: animLogo 1s;
+			animation-play-state: running;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&--state-3 {
+		position: absolute;
+		left: 0;
+		z-index: 10;
+		opacity: 0;
+
+		&:hover {
+			animation: animLogo 1s;
+			animation-play-state: running;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+@keyframes animLogo {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.header__mobile-container {
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	align-items: center;
+
+	&--show {
+		display: flex !important;
+	}
+}
+
+.header__nav {
+	margin-right: auto;
+	margin-left: 100px;
+}
+
+.header__nav-link {
+	color: #fff;
+	font-size: 18px;
+	line-height: 1;
+
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+.header__contacts {
+	display: flex;
+	align-items: center;
+}
+
+.header__phone-link {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+.header__phone-icon {
+	margin-right: 15px;
+}
+
+.header__whatsapp-link {
+	margin-right: 15px;
+}
+
+.hamburger {
+	display: none;
+	margin: 0;
+	padding: 15px;
+	overflow: visible;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	transition-timing-function: linear;
+	transition-duration: 0.15s;
+	transition-property: opacity, filter;
+}
+
+.hamburger-box {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+}
+
+.hamburger--squeeze .hamburger-inner:before {
+	transition: top 75ms ease 0.12s, opacity 75ms ease;
+}
+
+.hamburger-inner:before {
+	top: -10px;
+}
+
+.hamburger-inner:after {
+	bottom: -10px;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+	transform: rotate(45deg);
+	transition-delay: 0.12s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+	background-color: #fff;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner:before {
+	top: 0;
+	opacity: 0;
+	transition: top 75ms ease, opacity 75ms ease 0.12s;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner:after {
+	bottom: 0;
+	transform: rotate(-90deg);
+	transition: bottom 75ms ease,
+		transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+}
+
+.hamburger-inner:after,
+.hamburger-inner:before {
+	display: block;
+	content: '';
+}
+
+.hamburger--squeeze .hamburger-inner:after {
+	transition: bottom 75ms ease 0.12s,
+		transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner {
+	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	transition-duration: 75ms;
+}
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+	position: absolute;
+	width: 40px;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 4px;
+	transition-timing-function: ease;
+	transition-duration: 0.15s;
+	transition-property: transform;
+}
+.hamburger-inner {
+	top: 50%;
+	display: block;
+	margin-top: -2px;
+}
+
+// Media queries
+
+@include less-xl {
+	.header__nav {
+		margin-left: 50px;
+	}
+}
+
+@include less-lg {
+	.hamburger {
+		display: inline-block;
+	}
+
+	.header__container {
+		flex-wrap: wrap;
+	}
+
+	.header__mobile-container {
+		display: none;
+		flex-basis: 100%;
+		flex-direction: column;
+		order: 3;
+		padding-top: 20px;
+	}
+
+	.header__nav {
+		display: flex;
+		flex-direction: column;
+		margin-right: 0;
+		margin-bottom: 40px;
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.header__nav-link {
+		margin-right: 0 !important;
+		font-size: 24px;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.header__contacts {
+		flex-direction: column;
+	}
+
+	.header__phone-link {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+
+	.header__phone-icon {
+		width: 24px;
+	}
+
+	.header__whatsapp-icon,
+	.header__telegram-icon {
+		width: 40px;
+	}
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes

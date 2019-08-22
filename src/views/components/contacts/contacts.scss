@@ -1,0 +1,123 @@
+.contacts {
+	display: flex;
+
+	> * {
+		flex-basis: 50%;
+	}
+}
+
+.contacts__content {
+	display: flex;
+	padding: 100px 0;
+	padding-right: 240px;
+	padding-left: 20px;
+}
+
+.contacts__content-container {
+	max-width: 600px;
+	margin-left: auto;
+}
+
+.contacts__subtitle {
+	margin-bottom: 20px;
+	color: #000;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1;
+}
+
+.contacts__phone-link {
+	color: #000;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1;
+}
+
+.contacts__whatsapp-icon,
+.contacts__viber-icon {
+	margin-right: 15px;
+}
+
+.contacts__phone-item {
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+.contacts__phone-list {
+	margin-bottom: 15px;
+}
+
+.contacts__email-link {
+	margin-bottom: 40px;
+	color: #ff8945;
+	font-weight: 400;
+	font-size: 17px;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.contacts__top {
+	margin-bottom: 40px;
+}
+
+.contacts__address {
+	margin-bottom: 10px;
+	color: #000;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1.3;
+}
+
+.contacts__address-link {
+	display: flex;
+	align-items: center;
+	color: #0070c9;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.contacts__address-link-arrow {
+	margin-left: 14px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+	.contacts {
+		flex-direction: column;
+	}
+
+	.contacts__content-container {
+		margin-left: 0;
+	}
+
+	.contacts__map {
+		min-height: 400px;
+	}
+
+	.contacts__content {
+		padding-right: 20px;
+	}
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes

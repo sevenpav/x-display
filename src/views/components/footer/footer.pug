@@ -1,0 +1,11 @@
+mixin footer(mixes)
+  include ./_imports/import
+
+  .footer(class=(mixes) && `${mixes}__footer`)
+
+    .footer__container
+      img.footer__logo(src=require('../../../public/img/logo-black.svg') alt='Логотип')
+
+      nav.footer__nav
+        each link in [{ label: 'Услуги', target: '.services' }, { label: 'О нас', target: '.about' }, { label: 'Сотрудничество', target: '.partnership' }, { label: 'Контакты', target: '.contacts' }]
+          a.footer__link(href='#' data-target=`${link.target}`)= link.label

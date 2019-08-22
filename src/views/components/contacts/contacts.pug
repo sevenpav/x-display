@@ -1,0 +1,31 @@
+mixin contacts(mixes)
+  include ./_imports/import
+
+  .contacts(class=(mixes) && `${mixes}__contacts`)
+    .contacts__content
+      .contacts__content-container
+        .contacts__top
+          h5.contacts__subtitle Контакты
+
+          ul.contacts__phone-list
+            each phone, idx in ['+7 499 110-23-59', '+7 916 999-00-99', '+7 916 999-00-99']
+              li.contacts__phone-item
+                if (idx === 1)
+                  img.contacts__whatsapp-icon(src=require('../../components/contacts/img/whatsapp-icon.svg') alt='Иконка WhatsApp')
+                if (idx === 2)
+                  img.contacts__viber-icon(src=require('../../components/contacts/img/viber-icon.svg') alt='Иконка Viber')
+
+                a.contacts__phone-link(href='tel:')= phone
+
+          a.contacts__email-link(href='mailto:info@xdisplay.ru') info@xdisplay.ru
+
+        .contacts__bottom
+          h5.contacts__subtitle Офис и производство
+
+          p.contacts__address МО, пос. Поварово, 141540, ул. Почтовая, 29c11, офис 304
+
+          a.contacts__address-link(href='#') Схема проезда
+            img.contacts__address-link-arrow(src=require('../../../public/img/link-arrow.svg') alt='Иконка')
+
+    .contacts__map
+

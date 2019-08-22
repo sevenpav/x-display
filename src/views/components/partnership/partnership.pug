@@ -1,0 +1,30 @@
+mixin partnership(mixes)
+  include ./_imports/import
+
+  .partnership(class=(mixes) && `${mixes}__partnership`)
+
+    .partnership__container
+
+      h4.partnership__title Сотрудничество
+
+      p.partnership__desc Мы ценим наших партнеров. X DISPLAY –  это только качественные продукты <br> и отличный сервис по гибким справедливым ценам
+
+      .partnership__body
+
+        img.partnership__iphone(src=require('../../components/partnership/img/iphone.png') alt='Изображения iPhone')
+
+        .partnership__content
+          p.partnership__content-para X Display активно развивается и ищет надёжных партнеров в лице:
+
+          ul.partnership__content-list
+            each item in ['крупных сетевых ремонтных мастерских работающих с продукцией Apple;', 'частных розничных ремонтных мастерских работающих с продукцией Apple;', 'выездных мастеров по ремонту.']
+
+              li.partnership__content-item
+                img.partnership__content-arrow-icon(src=require('../../../public/img/link-arrow.svg') alt='Иконка')
+                = item
+
+    .partnership__banner
+      p.partnership__banner-text Мы нацелены на долгосрочные партнерские отношения <br> и гарантируем качество продукции, отличный сервис, <br> гибкую систему цен и скидок.
+
+
+

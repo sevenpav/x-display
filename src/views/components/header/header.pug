@@ -1,0 +1,29 @@
+mixin header(mixes)
+  include ./_imports/import
+
+  .header(class=(mixes) && `${mixes}__header`)
+    .header__container
+      .header__logo-container
+        img.header__logo.header__logo--state-1(src=require('../../../public/img/logo-state-1.png') alt='Логотип')
+        img.header__logo.header__logo--state-2(src=require('../../../public/img/logo-state-2.png') alt='Логотип')
+        img.header__logo.header__logo--state-3(src=require('../../../public/img/logo-state-3.png') alt='Логотип')
+      
+      .header__mobile-container
+        nav.header__nav
+          each link in [{ label: 'Услуги', target: '.services' }, { label: 'О нас', target: '.about' }, { label: 'Сотрудничество', target: '.partnership' }, { label: 'Контакты', target: '.contacts' }]
+            a.header__nav-link(href='#' data-target=`${link.target}`)= link.label
+
+        .header__contacts
+          a.header__phone-link(href='tel:74959990099')
+            img.header__phone-icon(src=require('../../components/header/img/phone-icon.svg') alt='Иконка телефона')
+            | +7 495 999-00-99
+
+          .header__social-links
+            a.header__whatsapp-link(href='#')
+              img.header__whatsapp-icon(src=require('../../components/header/img/whatsapp-icon.svg') alt='Иконка Whatsapp')
+            a.header__telegram-link(href='#')
+              img.header__telegram-icon(src=require('../../components/header/img/telegram-icon.svg') alt='Иконка Telegram')
+
+      .hamburger.hamburger--squeeze
+        .hamburger-box
+          .hamburger-inner

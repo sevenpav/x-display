@@ -1,0 +1,64 @@
+.footer {
+	background-color: #f2f2f2;
+}
+
+.footer__container {
+	@include container;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 0;
+}
+
+.footer__nav {
+	display: flex;
+	margin-right: -40px;
+}
+
+.footer__link {
+	margin-right: 40px;
+	color: #000;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+	.footer__logo {
+		margin-bottom: 20px;
+	}
+
+	.footer__container {
+		flex-direction: column;
+	}
+}
+
+@include less-sm {
+	.footer__nav {
+		flex-direction: column;
+		margin-right: 0;
+	}
+
+	.footer__link {
+		margin-right: 0 !important;
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// Mixes

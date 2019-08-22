@@ -1,0 +1,58 @@
+mixin services(mixes)
+  include ./_imports/import
+
+  - const data = require('../../components/services/data.json')
+
+  .services(class=(mixes) && `${mixes}__services`)
+
+    .services__modal
+      header.services__modal-header
+        h6.services__modal-title Восстановление дисплеев
+
+        button.services__modal-close-btn(type='button')
+          img.services__modal-close-icon(src=require('../../../public/img/close.svg') alt='Иконка закрыть')
+        
+      .services__modal-body
+        .services__modal-table
+          ul.services__modal-table-list
+            each item in [1, 2, 3, 4 ,5 ,6 ,7]
+              li.services__modal-table-item
+                p.services__modal-table-item-name iPhone 5/5C/5S/SE
+                p.services__modal-table-item-price 500 руб.
+          ul.services__modal-table-list
+            each item in [1, 2, 3, 4 ,5 ,6]
+              li.services__modal-table-item
+                p.services__modal-table-item-name iPhone 8
+                p.services__modal-table-item-price 1200 руб.
+
+        .services__modal-other-links
+          each link in ['Продажа оригинальных дисплеев', 'Покупка битых дисплеев']
+            a.services__modal-other-link(href='#')= link
+              img.services__modal-other-link-icon(src=require('../../../public/img/link-arrow.svg') alt='Иконка')
+
+      footer.services__modal-footer
+        p.services__modal-footer-text Оставьте ваш номер телефона, и мы перезвоним:
+        form.services__modal-form(action="POST")
+          input.services__modal-input(type="text")
+          button.services__modal-btn-submit(type='submit') Перезвоните мне
+
+    .services__container
+      h4.services__title Наши услуги
+
+      ul.services__list
+        each item in data.list
+          li.services__item
+            .services__item-img-container
+              img.services__item-img(src=require('../../components/services/img/iphone-item.png') alt="Изображение")
+            .services__item-content
+              h6.services__item-title= item.title
+              if (item.desc)
+                p.services__item-decs= item.desc
+              ul.services__item-list
+                each link in item.links
+                  li.services__item-li
+                    button.services__item-btn(type='button')= link
+                      img.services__item-arrow-icon(src=require('../../../public/img/link-arrow.svg') alt='Иконка стрелки')
+
+
+

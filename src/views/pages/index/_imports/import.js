@@ -1,0 +1,6 @@
+import '../../../components/first-screen/first-screen'
+import '../../../components/services/services'
+import '../../../components/promo/promo'
+import '../../../components/about/about'
+import '../../../components/partnership/partnership'
+import '../../../components/contacts/contacts'

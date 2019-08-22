@@ -1,0 +1,187 @@
+.about {
+	border-bottom: 1px solid #e3e3e3;
+	@include container;
+
+	img {
+		width: auto !important;
+	}
+}
+
+.about__title {
+	margin-bottom: 20px;
+	color: #000;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 1;
+	text-align: center;
+}
+
+.about__top-desc,
+.about__bottom-desc {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	color: #000;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.about__bottom-desc {
+	margin-top: 30px;
+	margin-bottom: 70px;
+}
+
+.about__options {
+	display: flex;
+	margin-bottom: -40px;
+	@include container;
+}
+
+.about__option {
+	flex-basis: 33.333333%;
+	margin-bottom: 40px;
+	padding: 40px;
+	background-color: #fafafa;
+
+	&:not(:last-child) {
+		margin-right: 40px;
+	}
+}
+
+.about__option-icon {
+	margin-bottom: 20px;
+}
+
+.about__option-label {
+	margin-bottom: 20px;
+	color: #deb07a;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1;
+}
+
+.about__option-title {
+	margin-bottom: 20px;
+	color: #000;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 1.3;
+}
+
+.about__option-item {
+	display: flex;
+	align-items: flex-start;
+	color: #000;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 1.5;
+
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+.about__option-arrow-icon {
+	margin-right: 10px;
+	transform: translateY(50%);
+}
+
+.about__slider {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about__slider-btn-left,
+.about__slider-btn-right {
+	&:hover {
+		svg {
+			path {
+				fill: #deb07a;
+			}
+		}
+	}
+}
+
+.about__slider-btn-left {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(-200%, -50%);
+}
+
+.about__slider-btn-right {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(200%, -50%);
+}
+
+.about__slide-two {
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.about__logo-container {
+	display: flex;
+	flex-basis: 50%;
+	justify-content: center;
+	align-items: center;
+	height: 480px;
+	margin-right: 20px;
+	background-color: #fafafa;
+
+	.about__logo {
+		width: 405px !important;
+	}
+}
+
+.about__history {
+	flex-basis: 50%;
+	margin-left: 20px;
+	color: #000;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+	.about__options {
+		flex-direction: column;
+	}
+
+	.about__option {
+		margin-right: 0 !important;
+	}
+
+	.about__slide-two {
+		flex-direction: column;
+	}
+
+	.about__logo-container {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+		padding: 100px 0;
+	}
+
+	.about__history {
+		margin-left: 0;
+	}
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes

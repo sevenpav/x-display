@@ -1,0 +1,36 @@
+mixin promo(mixes)
+  include ./_imports/import
+
+  .promo(class=(mixes) && `${mixes}__promo`)
+
+    .promo__modal
+      header.promo__modal-header
+        h6.promo__modal-title Связаться с нами
+
+        button.promo__modal-close-btn(type='button')
+          img.promo__modal-close-icon(src=require('../../../public/img/close.svg') alt='Иконка закрыть')
+
+      form.promo__modal-form(action='POST')
+        .promo__modal-form-field
+          input.promo__modal-input(id='name' type='text' placeholder='Ваше имя')
+          label.promo__modal-label(htmlFor='name') Ваше имя
+        .promo__modal-form-field
+          input.promo__modal-input(id='email' type='text' placeholder='E-mail')
+          label.promo__modal-label(htmlFor='email') E-mail
+        .promo__modal-form-field
+          input.promo__modal-input(id='phone' type='text' placeholder='Номер телефона')
+          label.promo__modal-label(htmlFor='phone') Номер телефона
+        .promo__modal-form-field
+          textarea.promo__modal-textarea(id='message' type='text' placeholder='Ваше сообщение')
+          label.promo__modal-label(htmlFor='message') Ваше сообщение
+
+        button.promo__modal-form-btn-submit(type='submit') Отправить сообщение
+
+        span.promo__modal-form-agree Нажимая кнопку «Отправить», вы соглашается с условиями обработки персональных данных
+
+
+
+    .promo__content
+      h4.promo__title Покупаем разбитые дисплеи iPhone
+      a.promo__link(href='#') Связаться с нами
+        img.promo__arrow-icon(src=require('../../../public/img/link-arrow.svg') alt='Иконка стрелки')

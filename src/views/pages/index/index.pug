@@ -1,0 +1,25 @@
+extends ~@/views/layouts/main/main
+
+block title
+  title
+
+block content
+
+  include ./_imports/import
+
+  - const data = require('./data.json')
+
+
+  #index-pg
+
+    +first-screen('index-pg')
+
+    +services('index-pg')
+
+    +promo('index-pg')
+
+    +about('index-pg')
+
+    +partnership('index-pg')
+
+    +contacts('index-pg')

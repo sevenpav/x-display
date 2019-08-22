@@ -1,0 +1,23 @@
+@include importFont('SF Pro Display', 700) {
+	src: url('../../public/fonts/ttf/SFProDisplay-Bold.ttf') format('truetype'),
+		url('../../public/fonts/woff/SFProDisplay-Bold.woff') format('woff'),
+		url('../../public/fonts/woff2/SFProDisplay-Bold.woff2') format('woff2');
+}
+
+@include importFont('SF Pro Display', 400) {
+	src: url('../../public/fonts/ttf/SFProDisplay-Regular.ttf') format('truetype'),
+		url('../../public/fonts/woff/SFProDisplay-Regular.woff') format('woff'),
+		url('../../public/fonts/woff2/SFProDisplay-Regular.woff2') format('woff2');
+}
+
+@include importFont('SF Pro Display', 300) {
+	src: url('../../public/fonts/ttf/SFProDisplay-Light.ttf') format('truetype'),
+		url('../../public/fonts/woff/SFProDisplay-Light.woff') format('woff'),
+		url('../../public/fonts/woff2/SFProDisplay-Light.woff2') format('woff2');
+}
+
+@include importFont('SF Pro Display', 200) {
+	src: url('../../public/fonts/ttf/SFProDisplay-Thin.ttf') format('truetype'),
+		url('../../public/fonts/woff/SFProDisplay-Thin.woff') format('woff'),
+		url('../../public/fonts/woff2/SFProDisplay-Thin.woff2') format('woff2');
+}

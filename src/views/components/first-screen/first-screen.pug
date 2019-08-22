@@ -1,0 +1,18 @@
+mixin first-screen(mixes)
+  include ./_imports/import
+
+  .first-screen(class=(mixes) && `${mixes}__first-screen`)
+
+    .first-screen__container
+
+      .first-screen__iphone-container
+        img.first-screen__iphone-img(src=require('../../components/first-screen/img/iphone.png') alt='Изображение iPhone')
+        img.first-screen__iphone-img.first-screen__iphone-img--state-1(src=require('../../components/first-screen/img/iphone-state-1.png') alt='Изображение iPhone')
+        img.first-screen__iphone-img.first-screen__iphone-img--state-2(src=require('../../components/first-screen/img/iphone-state-2.png') alt='Изображение iPhone')
+        img.first-screen__iphone-img.first-screen__iphone-img--state-3(src=require('../../components/first-screen/img/iphone-state-3.png') alt='Изображение iPhone')
+        img.first-screen__iphone-img.first-screen__iphone-img--state-4(src=require('../../components/first-screen/img/iphone-state-4.png') alt='Изображение iPhone')
+
+      .first-screen__content
+        img.first-screen__logo(src=require('../../../public/img/logo.svg') alt='Логотип')
+        h1.first-screen__title Лаборатория восстановления дисплейных модулей iPhone
+

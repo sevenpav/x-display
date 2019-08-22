@@ -1,0 +1,29 @@
+include ./_imports/import
+
+doctype html
+html
+  head(lang='ru')
+    meta(charset='UTF-8')
+    block seo
+      meta(name='description', content='')
+      meta(name='keywords', content='')
+    meta(
+      name='viewport',
+      content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
+    )
+    meta(
+      http-equiv='X-UA-Compatible',
+      content='ie=edge'
+    )
+    block title
+      title Главная
+  body
+
+    .dark-bg
+
+    +header
+
+    block content
+
+    +footer
+
