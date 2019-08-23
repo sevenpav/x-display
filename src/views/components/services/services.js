@@ -22,7 +22,11 @@ $(document).ready(function() {
 	$servicesLink.click(function(e) {
 		e.preventDefault()
 
+		const id = $(this).data('id')
+
 		$darken.addClass('dark-bg--show')
+
+		// $(`[data-id="${id}"]`).addClass('services__modal--show')
 
 		$modal.addClass('services__modal--show')
 	})

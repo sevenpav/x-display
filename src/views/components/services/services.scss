@@ -22,6 +22,12 @@
 	margin-bottom: -40px;
 }
 
+.services__modal-error {
+	margin-top: 20px;
+	color: red;
+	font-size: 16px;
+}
+
 .services__item {
 	display: flex;
 	flex-basis: calc(50% - 40px);

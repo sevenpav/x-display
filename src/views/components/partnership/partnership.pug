@@ -11,7 +11,17 @@ mixin partnership(mixes)
 
       .partnership__body
 
-        img.partnership__iphone(src=require('../../components/partnership/img/iphone.png') alt='Изображения iPhone')
+
+        .partnership__iphone(src=require('../../components/partnership/img/iphone.png') alt='Изображения iPhone')
+          img.partnership__iphone-case-img(src=require('../../components/partnership/img/iphone-case.png') alt='Кейс iPhone')
+
+          .partnership__iphone-wrap
+            .partnership__iphone-text-block
+              p.partnership__iphone-text-title Работаем по всей Москве
+              a.partnership__link(href='#') Рассмотрим предложения из других городов
+                img.partnership__link-arrow-icon(src=require('../../../public/img/link-arrow.svg') alt='Иконка') 
+
+            img.partnership__map-img(src=require('../../components/partnership/img/map.png') alt='Карта')
 
         .partnership__content
           p.partnership__content-para X Display активно развивается и ищет надёжных партнеров в лице:

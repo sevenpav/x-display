@@ -2,6 +2,7 @@ import './promo.scss'
 import './_imports/import'
 
 import $ from 'jquery'
+import 'inputmask/dist/jquery.inputmask.bundle'
 
 $(() => {
 	const $modal = $('.promo__modal')
@@ -28,4 +29,6 @@ $(() => {
 
 		$modal.removeClass('promo__modal--show')
 	})
+
+	$('#phone', $modal).inputmask({ mask: '+7 (999) 999-9999' })
 })

@@ -4,7 +4,11 @@ mixin footer(mixes)
   .footer(class=(mixes) && `${mixes}__footer`)
 
     .footer__container
-      img.footer__logo(src=require('../../../public/img/logo-black.svg') alt='Логотип')
+      .footer__logo-container
+        img.footer__logo.header__logo.header__logo--state-1(src=require('../../components/footer/img/logo-state--1.png') alt='Логотип')
+        img.footer__logo.header__logo.header__logo--state-2(src=require('../../components/footer/img/logo-state--2.png') alt='Логотип')
+        img.footer__logo.header__logo.header__logo--state-3(src=require('../../components/footer/img/logo-state--3.png') alt='Логотип')
+        //- img.footer__logo(src=require('../../../public/img/logo-black.svg') alt='Логотип')
 
       nav.footer__nav
         each link in [{ label: 'Услуги', target: '.services' }, { label: 'О нас', target: '.about' }, { label: 'Сотрудничество', target: '.partnership' }, { label: 'Контакты', target: '.contacts' }]
