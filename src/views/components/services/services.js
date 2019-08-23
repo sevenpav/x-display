@@ -12,12 +12,25 @@ $(document).ready(function() {
 	const $modalCloseBtn = $('.services__modal-close-btn', $modal)
 	const $darken = $('.dark-bg')
 	const $servicesLink = $('.services__item-btn')
+    const $sericesOtherLink = $('.services__modal-other-link')
 
 	$darken.click(function() {
 		$darken.removeClass('dark-bg--show')
 
 		$modal.removeClass('services__modal--show')
 	})
+    
+    $sericesOtherLink.click(function(e) {
+        e.preventDefault()
+
+        $modalCloseBtn.trigger('click')
+
+        const id = $(this).data('id')
+
+        $darken.addClass('dark-bg--show')
+
+        $(`[data-id="${id}"]`).addClass('services__modal--show')
+    })
 
 	$servicesLink.click(function(e) {
 		e.preventDefault()
@@ -26,9 +39,9 @@ $(document).ready(function() {
 
 		$darken.addClass('dark-bg--show')
 
-		// $(`[data-id="${id}"]`).addClass('services__modal--show')
+		$(`[data-id="${id}"]`).addClass('services__modal--show')
 
-		$modal.addClass('services__modal--show')
+		//$modal.addClass('services__modal--show')
 	})
 
 	$modalCloseBtn.click(function() {
