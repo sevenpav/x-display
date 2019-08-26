@@ -4,9 +4,10 @@ mixin header(mixes)
   .header(class=(mixes) && `${mixes}__header`)
     .header__container
       .header__logo-container
-        img.header__logo.header__logo--state-1(src=require('../../../public/img/logo-state-1.png') alt='Логотип')
-        img.header__logo.header__logo--state-2(src=require('../../../public/img/logo-state-2.png') alt='Логотип')
-        img.header__logo.header__logo--state-3(src=require('../../../public/img/logo-state-3.png') alt='Логотип')
+        img.header__logo.header__logo(width='148px' src=require('../../../public/img/logo-white.png') alt='Логотип')
+        //- img.header__logo.header__logo--state-1(src=require('../../../public/img/logo-white.png') alt='Логотип')
+        //- img.header__logo.header__logo--state-2(src=require('../../../public/img/logo-state-2.png') alt='Логотип')
+        //- img.header__logo.header__logo--state-3(src=require('../../../public/img/logo-state-3.png') alt='Логотип')
       
       .header__mobile-container
         nav.header__nav
@@ -23,6 +24,8 @@ mixin header(mixes)
               img.header__whatsapp-icon(src=require('../../components/header/img/whatsapp-icon.svg') alt='Иконка Whatsapp')
             a.header__telegram-link(href='#')
               img.header__telegram-icon(src=require('../../components/header/img/telegram-icon.svg') alt='Иконка Telegram')
+            a.header__insta-link(href='https://www.instagram.com/xdisplayrussia/')
+              img.header__insta-icon(src=require('../../../public/img/instagram.svg') alt='Иконка Instagram')
 
       .hamburger.hamburger--squeeze
         .hamburger-box

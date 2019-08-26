@@ -42,10 +42,17 @@ mixin services(mixes)
       h4.services__title Наши услуги
 
       ul.services__list
-        each item in data.list
+        each item, idx in data.list
           li.services__item
             .services__item-img-container
-              img.services__item-img(src=require('../../components/services/img/iphone-item.png') alt="Изображение")
+              if (idx === 0)
+                img.services__item-img(src=require('../../components/services/img/iphone-item.png') alt="Изображение")
+              else if (idx === 1)
+                img.services__item-img(src=require('../../components/services/img/ipad.png') alt="Изображение")
+              else if (idx === 2)
+                img.services__item-img(src=require('../../components/services/img/watch.png') alt="Изображение")
+              else if (idx === 3)
+                img.services__item-img(src=require('../../components/services/img/parts.png') alt="Изображение")
             .services__item-content
               h6.services__item-title= item.title
               if (item.desc)

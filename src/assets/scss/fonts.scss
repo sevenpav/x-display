@@ -4,6 +4,13 @@
 		url('../../public/fonts/woff2/SFProDisplay-Bold.woff2') format('woff2');
 }
 
+@include importFont('SF Pro Display', 500) {
+	src: url('../../public/fonts/ttf/SFProDisplay-Semibold.ttf')
+			format('truetype'),
+		url('../../public/fonts/woff/SFProDisplay-Semibold.woff') format('woff'),
+		url('../../public/fonts/woff2/SFProDisplay-Semibold.woff2') format('woff2');
+}
+
 @include importFont('SF Pro Display', 400) {
 	src: url('../../public/fonts/ttf/SFProDisplay-Regular.ttf') format('truetype'),
 		url('../../public/fonts/woff/SFProDisplay-Regular.woff') format('woff'),

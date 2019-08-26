@@ -33,6 +33,19 @@
 	line-height: 1;
 }
 
+.contacts__social-group {
+	display: flex;
+	margin-top: 15px;
+
+	*:not(:last-child) {
+		margin-right: 15px;
+	}
+
+	> * {
+		display: inline-flex;
+	}
+}
+
 .contacts__whatsapp-icon,
 .contacts__viber-icon {
 	margin-right: 15px;

@@ -1,5 +1,5 @@
 .header {
-	background-color: #474747;
+	background-color: #1f1f1f;
 }
 
 .header__container {
@@ -115,6 +115,14 @@
 
 .header__whatsapp-link {
 	margin-right: 15px;
+}
+
+.header__telegram-link {
+	margin-right: 15px;
+}
+
+.header__insta-icon {
+	width: 30px;
 }
 
 .hamburger {
@@ -264,7 +272,8 @@
 	}
 
 	.header__whatsapp-icon,
-	.header__telegram-icon {
+	.header__telegram-icon,
+	.header__insta-icon {
 		width: 40px;
 	}
 }
