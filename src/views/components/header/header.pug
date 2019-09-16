@@ -4,10 +4,8 @@ mixin header(mixes)
   .header(class=(mixes) && `${mixes}__header`)
     .header__container
       .header__logo-container
-        img.header__logo.header__logo(width='148px' src=require('../../../public/img/logo-white.png') alt='Логотип')
-        //- img.header__logo.header__logo--state-1(src=require('../../../public/img/logo-white.png') alt='Логотип')
-        //- img.header__logo.header__logo--state-2(src=require('../../../public/img/logo-state-2.png') alt='Логотип')
-        //- img.header__logo.header__logo--state-3(src=require('../../../public/img/logo-state-3.png') alt='Логотип')
+        img.header__logo(src=require('../../../public/img/logo_white-01.svg') alt='Логотип' width='149px' height='22px')
+        //- img.header__logo.header__logo--state-2(src=require('../../components/header/img/logo-header-state-2.svg') alt='Логотип')
       
       .header__mobile-container
         nav.header__nav
@@ -20,9 +18,9 @@ mixin header(mixes)
             | +7 495 999-00-99
 
           .header__social-links
-            a.header__whatsapp-link(href='#')
+            a.header__whatsapp-link(href='https://wa.me/79015879447')
               img.header__whatsapp-icon(src=require('../../components/header/img/whatsapp-icon.svg') alt='Иконка Whatsapp')
-            a.header__telegram-link(href='#')
+            a.header__telegram-link(href='http://t-do.ru/ykorsakov')
               img.header__telegram-icon(src=require('../../components/header/img/telegram-icon.svg') alt='Иконка Telegram')
             a.header__insta-link(href='https://www.instagram.com/xdisplayrussia/')
               img.header__insta-icon(src=require('../../../public/img/instagram.svg') alt='Иконка Instagram')

@@ -11,7 +11,8 @@ $(document).ready(function() {
 	$slider.owlCarousel({
 		items: 1,
 		dots: false,
-		nav: false
+    nav: false,
+    loop: true
 	})
 
 	$('.about__slider-btn-right').click(function() {

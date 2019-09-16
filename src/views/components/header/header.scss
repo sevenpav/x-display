@@ -7,60 +7,29 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 0;
+	padding: 11px 0;
 }
 
 .header__logo-container {
 	position: relative;
+  display: flex;
+  align-items: flex-start;
 }
 
 .header__logo {
-    
 	&--state-1 {
-		// z-index: 30;
+		position: absolute;
+		z-index: 100;
 	}
 
 	&--state-2 {
-		position: absolute;
-		left: 0;
-        top: 0;
-		// z-index: 20;
+		position: relative;
+		z-index: 200;
 		opacity: 0;
-		animation: animLogo 1s ease 0s infinite normal;
-		animation-play-state: paused;
-		animation-direction: alternate;
-		animation-fill-mode: backwards;
 
 		&:hover {
-			animation-play-state: running;
-			animation-fill-mode: forwards;
+			opacity: 1;
 		}
-	}
-
-	&--state-3 {
-		position: absolute;
-		left: 0;
-        top: 0;
-		opacity: 0;
-		animation: animLogo 1s ease 0s infinite normal;
-		animation-play-state: paused;
-		animation-direction: alternate;
-		animation-fill-mode: backwards;
-
-		&:hover {
-			animation-play-state: running;
-			animation-fill-mode: forwards;
-		}
-	}
-}
-
-@keyframes animLogo {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
 	}
 }
 

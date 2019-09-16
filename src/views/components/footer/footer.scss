@@ -7,7 +7,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 40px 0;
 }
 
 .footer__nav {
@@ -17,6 +16,25 @@
 
 .footer__logo-container {
 	position: relative;
+	display: flex;
+	padding: 10px 0;
+}
+
+.footer__logo {
+	&--state-1 {
+		// position: absolute;
+		// z-index: 100;
+	}
+
+	&--state-2 {
+		position: relative;
+		z-index: 200;
+		opacity: 0;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 .footer__link {

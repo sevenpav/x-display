@@ -8,32 +8,31 @@ mixin contacts(mixes)
           h5.contacts__subtitle Контакты
 
           ul.contacts__phone-list
-            each phone, idx in ['+7 499 110-23-59', '+7 916 999-00-99', '+7 916 999-00-99']
+            each phone, idx in ['+7 499 110-23-59']
               li.contacts__phone-item
-                if (idx === 1)
-                  img.contacts__whatsapp-icon(src=require('../../components/contacts/img/whatsapp-icon.svg') alt='Иконка WhatsApp')
-                if (idx === 2)
-                  img.contacts__viber-icon(src=require('../../components/contacts/img/viber-icon.svg') alt='Иконка Viber')
-
                 a.contacts__phone-link(href='tel:')= phone
 
           a.contacts__email-link(href='mailto:info@xdisplay.ru') info@xdisplay.ru
 
           .contacts__social-group
             a.contacts__facebook-link(href='https://www.facebook.com/xdisplayrussia/' target='_blanc')
-              img.contacts__facebook-icon(width='30px' src=require('../../../public/img/facebook.svg') alt='Иконка Facebook')
+              img.contacts__facebook-icon(width='30px' height='30px' src=require('../../../public/img/facebook.svg') alt='Иконка Facebook')
             a.contacts__vk-link(href='https://vk.com/xdisplayrussia' target='_blanc')
-              img.contacts__vk-icon(width='30px' src=require('../../../public/img/vk.svg') alt='Иконка VK')
+              img.contacts__vk-icon(width='30px' height='30px' src=require('../../../public/img/vk.svg') alt='Иконка VK')
             a.contacts__insta-link(href='https://www.instagram.com/xdisplayrussia/' target='_blanc')
-              img.contacts__insta-icon(width='30px' src=require('../../../public/img/instagram.svg') alt='Иконка Instagram')
+              img.contacts__insta-icon(width='30px' height='30px' src=require('../../../public/img/instagram.svg') alt='Иконка Instagram')
+            a.contacts__whatsapp-link(href='https://wa.me/79015879447' target='_blanc')
+              img.contacts__insta-icon(width='30px' height='30px' src=require('../../components/header/img/whatsapp-icon.svg') alt='Иконка WhatsApp')
+            a.contacts__telegram-link(href='http://t-do.ru/ykorsakov' target='_blanc')
+              img.contacts__insta-icon(width='30px' height='30px' src=require('../../components/header/img/telegram-icon.svg') alt='Иконка Telegram')
 
         .contacts__bottom
           h5.contacts__subtitle Офис и производство
 
           p.contacts__address МО, пос. Поварово, 141540, ул. Почтовая, 29c11, офис 304
 
-          a.contacts__address-link(href='#') Схема проезда
-            img.contacts__address-link-arrow(src=require('../../../public/img/link-arrow.svg') alt='Иконка')
+          //- a.contacts__address-link(href='#') Схема проезда
+          //-   img.contacts__address-link-arrow(src=require('../../../public/img/link-arrow.svg') alt='Иконка')
 
     .contacts__map
 

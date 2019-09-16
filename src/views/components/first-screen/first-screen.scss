@@ -2,6 +2,23 @@
 	background-color: #000;
 }
 
+.first-screen__logo {
+	&--state-1 {
+		position: absolute;
+		z-index: 100;
+	}
+
+	&--state-2 {
+		position: relative;
+		z-index: 200;
+		opacity: 0;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
 .first-screen__container {
 	@include container;
 	display: flex;
