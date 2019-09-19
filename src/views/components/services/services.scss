@@ -236,7 +236,8 @@
 
 @include less-sm {
 	.services__item {
-		flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
 	}
 
 	.services__item-img-container {

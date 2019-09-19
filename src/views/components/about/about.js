@@ -12,7 +12,8 @@ $(document).ready(function() {
 		items: 1,
 		dots: false,
     nav: false,
-    loop: true
+    loop: true,
+    autoHeight: true
 	})
 
 	$('.about__slider-btn-right').click(function() {

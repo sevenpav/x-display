@@ -124,6 +124,7 @@
 	display: flex;
 	align-items: center;
 	margin-top: 50px;
+	margin-bottom: 20px;
 }
 
 .about__logo-container {
@@ -133,10 +134,11 @@
 	align-items: center;
 	height: 480px;
 	margin-right: 20px;
+	padding: 20px;
 	background-color: #fafafa;
 
 	.about__logo {
-		width: 405px !important;
+		width: 100% !important;
 	}
 }
 
@@ -170,7 +172,7 @@
 		width: 100%;
 		margin-right: 0;
 		margin-bottom: 20px;
-		padding: 100px 0;
+		padding: 100px 20px;
 	}
 
 	.about__history {
