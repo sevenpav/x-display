@@ -1,52 +1,49 @@
-import './services.scss'
-import './_imports/import'
-
 import $ from 'jquery'
 
 import 'inputmask/dist/jquery.inputmask.bundle'
 
 $(document).ready(function() {
-	$('.services__modal-input').inputmask({ mask: '+7 (999) 999-9999' })
+  $('.services__modal-input').inputmask({ mask: '+7 (999) 999-9999' })
 
-	const $modal = $('.services__modal')
-	const $modalCloseBtn = $('.services__modal-close-btn', $modal)
-	const $darken = $('.dark-bg')
-	const $servicesLink = $('.services__item-btn')
-    const $sericesOtherLink = $('.services__modal-other-link')
+  const $modal = $('.services__modal')
+  const $modalCloseBtn = $('.services__modal-close-btn', $modal)
+  const $darken = $('.dark-bg')
+  const $servicesLink = $('.services__item-btn')
+  const $sericesOtherLink = $('.services__modal-other-link')
 
-	$darken.click(function() {
-		$darken.removeClass('dark-bg--show')
+  $darken.click(function() {
+    $darken.removeClass('dark-bg--show')
 
-		$modal.removeClass('services__modal--show')
-	})
-    
-    $sericesOtherLink.click(function(e) {
-        e.preventDefault()
+    $modal.removeClass('services__modal--show')
+  })
 
-        $modalCloseBtn.trigger('click')
+  $sericesOtherLink.click(function(e) {
+    e.preventDefault()
 
-        const id = $(this).data('id')
+    $modalCloseBtn.trigger('click')
 
-        $darken.addClass('dark-bg--show')
+    const id = $(this).data('id')
 
-        $(`[data-id="${id}"]`).addClass('services__modal--show')
-    })
+    $darken.addClass('dark-bg--show')
 
-	$servicesLink.click(function(e) {
-		e.preventDefault()
+    $(`[data-id="${id}"]`).addClass('services__modal--show')
+  })
 
-		const id = $(this).data('id')
+  $servicesLink.click(function(e) {
+    e.preventDefault()
 
-		$darken.addClass('dark-bg--show')
+    const id = $(this).data('id')
 
-		$(`[data-id="${id}"]`).addClass('services__modal--show')
+    $darken.addClass('dark-bg--show')
 
-		//$modal.addClass('services__modal--show')
-	})
+    $(`[data-id="${id}"]`).addClass('services__modal--show')
 
-	$modalCloseBtn.click(function() {
-		$darken.removeClass('dark-bg--show')
+    //$modal.addClass('services__modal--show')
+  })
 
-		$modal.removeClass('services__modal--show')
-	})
+  $modalCloseBtn.click(function() {
+    $darken.removeClass('dark-bg--show')
+
+    $modal.removeClass('services__modal--show')
+  })
 })

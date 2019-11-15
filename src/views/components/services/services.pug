@@ -1,7 +1,6 @@
 mixin services(mixes)
-  include ./_imports/import
 
-  - const data = require('../../components/services/data.json')
+  - const data = require('../../components/services/data.js')
 
   .services(class=(mixes) && `${mixes}__services`)
 

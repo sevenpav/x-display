@@ -1,45 +1,68 @@
 mixin about(mixes)
-  include ./_imports/import
-
-  - const data = require('../../components/about/data.json')
+  - const data = require('../../components/about/data.js')
 
   .about(class=(mixes) && `${mixes}__about`)
     h4.about__title О нас
+    p.about__top-desc X  DISPLAY – это удобный сервис для вашей мастерской. <br> Мы обладаем производственными мощностями, которые позволяют в лабораторных условиях осуществлять, по заводским технологиям, ремонт дисплеев от компании Apple
 
     .about__slider
       button.about__slider-btn-left
         include ./img/arrow-left.svg
 
+
       ul.about__slider-view.owl-carousel
-        li.about__slide-one
-          p.about__top-desc X  DISPLAY – это удобный сервис для вашей мастерской. <br> Мы обладаем производственными мощностями, которые позволяют в лабораторных условиях осуществлять, по заводским технологиям, ремонт дисплеев от компании Apple
+       each option, idx in data.list
+        li.about__option
+          header.about__option-header
+          
+            .about__option-title-block
+              p.about__option-label= option.label
+              h6.about__option-title= option.title
 
-          ul.about__options
-            each option, idx in data.list
-              li.about__option
-                if (idx === 0)
-                  img.about__option-icon(src=require('../../components/about/img/option-1-icon.svg') alt='Иконка')
-                if (idx === 1)
-                  img.about__option-icon(src=require('../../components/about/img/option-2-icon.svg') alt='Иконка')
-                if (idx === 2)
-                  img.about__option-icon(src=require('../../components/about/img/option-3-icon.svg') alt='Иконка')
+            if (idx === 0)
+              img.about__option-icon(src=require('../../components/about/img/option-1-icon.svg') alt='Иконка')
+            if (idx === 1)
+              img.about__option-icon(src=require('../../components/about/img/option-2-icon.svg') alt='Иконка')
+            if (idx === 2)
+              img.about__option-icon(src=require('../../components/about/img/option-3-icon.svg') alt='Иконка')
+          
+          ul.about__option-list
+            each item, idx in option.items
+              li.about__option-item
+                if (idx !== 0)
+                  img.about__option-arrow-icon(src=require('views/components/about/img/link-arrow.svg') alt='Иконка')
+                = item
+
+        //- li.about__slide-one
+
+          //- ul.about__options
+          //-   each option, idx in data.list
+          //-     li.about__option
+          //-       if (idx === 0)
+          //-         img.about__option-icon(src=require('../../components/about/img/option-1-icon.svg') alt='Иконка')
+          //-       if (idx === 1)
+          //-         img.about__option-icon(src=require('../../components/about/img/option-2-icon.svg') alt='Иконка')
+          //-       if (idx === 2)
+          //-         img.about__option-icon(src=require('../../components/about/img/option-3-icon.svg') alt='Иконка')
                 
-                p.about__option-label= option.label
-                h6.about__option-title= option.title
+          //-       p.about__option-label= option.label
+          //-       h6.about__option-title= option.title
 
-                ul.about__option-list
-                  each item in option.items
-                    li.about__option-item
-                      img.about__option-arrow-icon(src=require('../../../public/img/link-arrow.svg') alt='Иконка')
-                      = item
+          //-       ul.about__option-list
+          //-         each item in option.items
+          //-           li.about__option-item
+          //-             img.about__option-arrow-icon(src=require('../../../public/img/link-arrow.svg') alt='Иконка')
+          //-             = item
 
-          p.about__bottom-desc Мы сами забираем, принимаем и доставляем всю продукцию по Москве в пределах МКАДа <span class="bold">бесплатно</span>. Один звонок и запчасти у вас!
         
-        li.about__slide-two
-          .about__logo-container
-            img.about__logo(width='406px' src=require('../../../public/img/logo.png') alt='Логотип')
+        //- li.about__slide-two
+          //- .about__logo-container
+          //-   img.about__logo(width='406px' src=require('../../../public/img/logo.png') alt='Логотип')
 
-          p.about__history Бренд Х DISPLAY основан в 2019 году командой профессионалов и несёт в себе миссию организовать поставку качественных оригинальных запасных частей iPhone по справедливой цене. <br><br> Сегодня мы работает с B2B направлением и активно развиваем его.
+          //- p.about__history Бренд Х DISPLAY основан в 2019 году командой профессионалов и несёт в себе миссию организовать поставку качественных оригинальных запасных частей iPhone по справедливой цене. <br><br> Сегодня мы работает с B2B направлением и активно развиваем его.
+      
       button.about__slider-btn-right
         include ./img/arrow-right.svg
+        
+    p.about__bottom-desc Мы сами забираем, принимаем и доставляем всю продукцию по Москве в пределах МКАДа <span class="bold">бесплатно</span>. Один звонок и запчасти у вас!
       

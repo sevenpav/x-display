@@ -1,14 +1,11 @@
-extends ~@/views/layouts/main/main
+extends ~@/layout
 
 block title
   title
 
 block content
 
-  include ./_imports/import
-
-  - const data = require('./data.json')
-
+  - const data = require('./data.js')
 
   #index-pg
 

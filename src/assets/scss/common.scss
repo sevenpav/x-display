@@ -22,3 +22,19 @@ h6 {
 .bold {
 	font-weight: 700;
 }
+
+.dark-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(#000, 0.7);
+	cursor: pointer;
+
+	&--show {
+		display: block;
+	}
+}

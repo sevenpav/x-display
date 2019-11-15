@@ -1,25 +1,22 @@
-import './header.scss'
-import './_imports/import'
-
 import $ from 'jquery'
 
 $(() => {
-	const $links = $('.header__nav-link')
+  const $links = $('.header__nav-link')
 
-	const $mobileContainer = $('.header__mobile-container')
+  const $mobileContainer = $('.header__mobile-container')
 
-	$links.click(function(e) {
-		e.preventDefault()
+  $links.click(function(e) {
+    e.preventDefault()
 
-		const $target = $($(this).data('target'))
+    const $target = $($(this).data('target'))
 
-		$('html, body').animate({ scrollTop: $target.offset().top - 20 }, 400)
-	})
+    $('html, body').animate({ scrollTop: $target.offset().top - 20 }, 400)
+  })
 
-	const $hamburger = $('.hamburger')
+  const $hamburger = $('.hamburger')
 
-	$hamburger.click(() => {
-		$hamburger.toggleClass('is-active')
-		$mobileContainer.toggleClass('header__mobile-container--show')
-	})
+  $hamburger.click(() => {
+    $hamburger.toggleClass('is-active')
+    $mobileContainer.toggleClass('header__mobile-container--show')
+  })
 })
