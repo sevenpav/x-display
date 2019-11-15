@@ -193,6 +193,12 @@
 }
 
 @include less-md {
+  .about {
+    padding: 0 60px;
+  }
+  .about__slider {
+  }
+
   .about__option {
     min-height: auto;
   }
